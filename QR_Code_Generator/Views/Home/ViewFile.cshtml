@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "ViewFile";
+}
+
+
+@model List<KeyValuePair<string, string>>
+
+
+<table>
+    <thead>
+        <tr>
+            <td>
+                QR Code File
+            </td>
+            <td>
+                QR Code File Decoded Text
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (KeyValuePair<string, string> k in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@k.Value" />
+                </td>
+                <td>
+                    @k.Key
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
